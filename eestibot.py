@@ -169,6 +169,12 @@ def run():
     )
 
   @bot.command()
+  async def sourcecode(ctx: commands.Context):
+    await ctx.send(
+        '*GitHub Repo*: <https://github.com/1eemur/EestiBot>'
+    )
+
+  @bot.command()
   async def quickstart(ctx: commands.Context):
     await ctx.send(
         '***If you want to start learning you could use:***\n<https://www.keeleklikk.ee/index_en.html>\nor\n<https://www.speakly.me/>\nKeeleklikk is free and you can use a code to get Speakly free for a limited time\nEV100 - 12 months \nWORKINESTONIA - 3 months \nand/or use the code FNS7 to get 40% off \n*For a full Estonian resource list, you can take a look at: <http://eestikeelt.com/>*'
