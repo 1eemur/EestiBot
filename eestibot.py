@@ -212,6 +212,7 @@ def run():
   @bot.command()
   async def ed(ctx: commands.Context, word: str):
     await ctx.send(defineWord('eng', word))
+  
   bot.run(constants.get("CONSTANTS", "BOTTOKEN"))
 
 
