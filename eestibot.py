@@ -44,8 +44,7 @@ def APISearch(inp):
 def getCases(data):
   w = data['estonianWord']
   p = data['searchResult'][0]['meanings'][0]['partOfSpeech'][0]['value'].capitalize()
-  p = p.split(' ', 1)[0]
-  p = p.replace(',', '')
+  p = p.split(' ', 1)[0].replace(',', '')
   p_eng_map = {
       "Nimisõna": "Noun",
       "Omadussõna": "Adjective",
@@ -130,12 +129,11 @@ def defineWord(mode, input):
   if not data.get("searchResult"):
     return "No definitions found (Make sure to use the word in its root form)"
   cases, p, p_eng = getCases(data)
-  w = data['estonianWord']
   result = ""
   if mode == "est":
-    result = f"{w.capitalize()} - {p}\n{cases}\n"
+    result = f"{data['estonianWord'].capitalize()} - {p}\n{cases}\n"
   else:
-    result = f"{w.capitalize()} - {p_eng}\n{cases}\n"
+    result = f"{data['estonianWord'].capitalize()} - {p_eng}\n{cases}\n"
   meanings = data['searchResult'][0].get('meanings', [])
   for i, meaning in enumerate(meanings):
       est_def = f"🇪🇪 **{i + 1}.** {meaning['definition']}\n"
