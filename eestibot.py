@@ -136,8 +136,7 @@ def defineWord(mode, input):
     result = f"{data['estonianWord'].capitalize()} - {p_eng}\n{cases}\n"
   meanings = data['searchResult'][0].get('meanings', [])
   for i, meaning in enumerate(meanings):
-      est_def = f"🇪🇪 **{i + 1}.** {meaning['definition']}\n"
-      result += est_def
+      result += f"🇪🇪 **{i + 1}.** {meaning['definition']}\n"
       if mode == 'eng':
         eng_def = get_translation(meaning['definition'])
         result += f"🇬🇧 **{i + 1}.** {eng_def}\n"
