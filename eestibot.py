@@ -162,7 +162,7 @@ def run():
   @bot.command()
   async def speakly(ctx: commands.Context):
     await ctx.send(
-        'Speakly Codes: **EV100** (12 months) and **WORKINESTONIA** (3 months)\n***May no longer be valid***'
+        'The codes for free access to Speakly are sadly no longer valid. :('
     )
 
   @bot.command()
@@ -174,13 +174,13 @@ def run():
   @bot.command()
   async def quickstart(ctx: commands.Context):
     await ctx.send(
-        '***If you want to start learning you could use:***\n<https://www.keeleklikk.ee/index_en.html>\nor\n<https://www.speakly.me/>\nKeeleklikk is free and Speakly is paid with a free trial and discount codes available.\n code FNS7 to get 40% off \n*For a full Estonian resource list, you can take a look at: <http://eestikeelt.com/>*'
+        '***If you want to start learning you could use:***\n<https://www.keeleklikk.ee/index_en.html>\nor\n<https://www.speakly.me/>\nKeeleklikk is free and Speakly is paid with a two-week free trial and discount codes available.\n code FNS7 to get 40% off \n*For a full Estonian resource list, you can take a look at: <http://eestikeelt.com/>*'
     )
 
   @bot.command()
-  async def quickstart(ctx: commands.Context):
+  async def qs(ctx: commands.Context):
     await ctx.send(
-        '***If you want to start learning you could use:***\n<https://www.keeleklikk.ee/index_en.html>\nor\n<https://www.speakly.me/>\nKeeleklikk is free and Speakly is paid with a free trial and discount codes available.\n code FNS7 to get 40% off \n*For a full Estonian resource list, you can take a look at: <http://eestikeelt.com/>*'
+        '***If you want to start learning you could use:***\n<https://www.keeleklikk.ee/index_en.html>\nor\n<https://www.speakly.me/>\nKeeleklikk is free and Speakly is paid with a two-week free trial and discount codes available.\n code FNS7 to get 40% off \n*For a full Estonian resource list, you can take a look at: <http://eestikeelt.com/>*'
     )
 
   @bot.command()
