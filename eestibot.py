@@ -53,7 +53,8 @@ def getCases(data):
       "Omadussõna nimisõna": "/Adjective & Noun",
       "Sidesõna": "Conjunction",
       "Asesõna": "Pronoun",
-      "Arvsõna": "Numeral"
+      "Arvsõna": "Numeral",
+      "Hüüdsõna": "Interjection"
   }
   p_eng = p_eng_map.get(p, "")
   cases = ""
@@ -100,6 +101,8 @@ def getCases(data):
   elif p == "Arvsõna":
     cases = f"*{w}*"
   elif p == "Sidesõna":
+    cases = f"*{w}*"
+  elif p == "Hüüdsõna":
     cases = f"*{w}*"
   elif p == "Asesõna":
     word_forms_dict = {
