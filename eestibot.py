@@ -194,7 +194,7 @@ def run():
   @bot.command()
   async def kuskustkuhu(ctx: commands.Context):
     await ctx.send(
-        'Kus = where\nKuhu = where (to)\nKust = where (from)\n\nKus sa oled? - Where are you?\nKuhu sa lähed? - Where you going?\nKust sa pärit oled? - Where are you from?
+        'Kus = where\nKuhu = where (to)\nKust = where (from)\n\nKus sa oled? - Where are you?\nKuhu sa lähed? - Where you going?\nKust sa pärit oled? - Where are you from?'
     )
 
   @bot.command()
