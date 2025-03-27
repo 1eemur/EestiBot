@@ -28,6 +28,7 @@ def get_translation(text, source="et", target="en"):
 def sanitize_input(inp):
     return re.sub(r"[^a-zA-ZäÄöÖüÜõÕšŠžŽ]", "", inp)
 
+
 def APISearch(inp):
   sanitized_input = sanitize_input(inp)
   varb = f'https://api.sonapi.ee/v2/{sanitized_input}'
@@ -191,6 +192,12 @@ def run():
     )
 
   @bot.command()
+  async def kuskustkuhu(ctx: commands.Context):
+    await ctx.send(
+        'Kus = where\nKuhu = where (to)\nKust = where (from)\n\nKus sa oled? - Where are you?\nKuhu sa lähed? - Where you going?\nKust sa pärit oled? - Where are you from?
+    )
+
+  @bot.command()
   async def listcommands(ctx: commands.Context):
     await ctx.send(
         '**Commands:**\n!hommik - Show a friendly greeting\n!cases/!c [word] - Show cases for [word]\n!define/!d [word] - Show Estonian definitions for [word]\n!edefine/!ed [word] - Show English translated definitions for [word]\n'
@@ -199,6 +206,14 @@ def run():
   @bot.command()
   async def cases(ctx: commands.Context, word: str):
     await ctx.send(searchCases(word))
+
+  @bot.command()
+  async def clearskies(ctx: commands.Context):
+    await ctx.send('https://imgur.com/IckaDkr')
+
+  @bot.command()
+  async def alatiolnud(ctx: commands.Context):
+    await ctx.send('https://i.imgur.com/8USHKLS.mp4')
 
   @bot.command()
   async def c(ctx: commands.Context, word: str):
