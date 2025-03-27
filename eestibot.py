@@ -3,6 +3,7 @@ from discord.ext import commands
 import os
 import requests
 import json
+import re
 from deep_translator import GoogleTranslator
 from configparser import ConfigParser
 
@@ -24,11 +25,13 @@ def get_translation(text, source="et", target="en"):
         print(f"Translation error: {e}")
         return text
 
+def sanitize_input(inp):
+    return re.sub(r"[^a-zA-ZäÄöÖüÜõÕšŠžŽ]", "", inp)
 
 def APISearch(inp):
-  varb = 'https://api.sonapi.ee/v2/' + inp.replace("y", "ü").replace(
-      "2", "ä").replace("6", "ö").replace("8", "õ").replace("\'", "ä").replace(
-          "[", "ü").replace("]", "õ").replace("sh", "š")
+  sanitized_input = sanitize_input(inp)
+  varb = f'https://api.sonapi.ee/v2/{sanitized_input}'
+
   response = requests.get(varb)
   if response.status_code == 404:
     print("Vigane sisend")
@@ -129,7 +132,7 @@ def getCases(data):
 
 def defineWord(mode, input):
   data = APISearch(input)
-  if not data.get("searchResult"):
+  if data is None or not isinstance(data, dict) or "searchResult" not in data:
     return "No definitions found (Make sure to use the word in its root form)"
   cases, p, p_eng = getCases(data)
   result = ""
@@ -145,10 +148,11 @@ def defineWord(mode, input):
         result += f"🇬🇧 **{i + 1}.** {eng_def}\n"
   return result
 
+
 def searchCases(input):
   data = APISearch(input)
-  if not data.get("searchResult"):
-    return "No definitions found (Make sure to use the word in its root form)"
+  if data is None or not isinstance(data, dict) or "searchResult" not in data:    
+      return "No definitions found (Make sure to use the word in its root form)"
   cases, p, p_eng = getCases(data)
   return cases
 
@@ -189,7 +193,7 @@ def run():
   @bot.command()
   async def listcommands(ctx: commands.Context):
     await ctx.send(
-        '**Commands:**\n!hommik - Show a friendly greeting\n!cases/!c [word] - Show cases for [word]\n!define/!d [word] - Show definitions for [word]\n!defineeng/!deng [word] - Show English translated definitions for [word]\n!definebi/!dbi [word]- Show bilingual translations for [word]'
+        '**Commands:**\n!hommik - Show a friendly greeting\n!cases/!c [word] - Show cases for [word]\n!define/!d [word] - Show Estonian definitions for [word]\n!edefine/!ed [word] - Show English translated definitions for [word]\n'
     )
 
   @bot.command()
