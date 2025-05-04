@@ -212,6 +212,10 @@ def run():
     await ctx.send('https://imgur.com/IckaDkr')
 
   @bot.command()
+  async def theia(ctx: commands.Context):
+    await ctx.send('https://i.imgur.com/i8cUawK.gif')
+
+  @bot.command()
   async def alatiolnud(ctx: commands.Context):
     await ctx.send('https://i.imgur.com/8USHKLS.mp4')
 
