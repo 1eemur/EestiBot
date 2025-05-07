@@ -6,6 +6,4 @@
 *To be added*:
 - -ma/-da FAQ command
 - Better error handling
-- Bilingual translations for example definitions
-- Disclaimer for English machine translations
-- Command to link source code
+- The ability to request translations to languages besides English
