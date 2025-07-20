@@ -24,13 +24,7 @@ A Discord bot designed to help users learn Estonian through interactive dictiona
 - `!hommik` - Friendly Estonian greeting
 - `!listcommands` - Show all available commands
 - `!sourcecode` or `!lähtekood` - Link to bot's source code
-
-### Fun Commands
-- `!clearskies`
-- `!theia`
-- `!alatiolnud`
-- `!alatihommik`
-
+  
 ### Setup Instructions
 
 1. **Clone or download the bot files**

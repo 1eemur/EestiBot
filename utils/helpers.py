@@ -8,15 +8,18 @@ from typing import Dict, Any, Tuple
 
 def sanitize_input(text: str) -> str:
     """
-    Sanitize input by removing non-alphabetic characters
+    Sanitize input by removing non-alphabetic characters while preserving spaces
     
     Args:
         text: Input text to sanitize
         
     Returns:
-        Sanitized text containing only Estonian alphabet characters
+        Sanitized text containing only Estonian alphabet characters and spaces
     """
-    return re.sub(r"[^a-zA-ZäÄöÖüÜõÕšŠžŽ]", "", text)
+    # Allow Estonian alphabet characters and spaces
+    sanitized = re.sub(r"[^a-zA-ZäÄöÖüÜõÕšŠžŽ\s]", "", text)
+    # Clean up multiple spaces and strip whitespace
+    return sanitized
 
 
 class EstonianWordProcessor:
