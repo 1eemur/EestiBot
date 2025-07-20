@@ -20,19 +20,19 @@ class Estonian(commands.Cog):
         self.word_processor = EstonianWordProcessor()
     
     @commands.command(name='cases', aliases=['c'])
-    async def cases(self, ctx, word: str):
+    async def cases(self, ctx, *, word: str):
         """Show grammatical cases for an Estonian word"""
         result = self._search_cases(word)
         await ctx.send(result)
     
     @commands.command(name='define', aliases=['d'])
-    async def define(self, ctx, word: str):
+    async def define(self, ctx, *, word: str):
         """Show Estonian definitions for a word"""
         result = self._define_word('est', word)
         await ctx.send(result)
     
     @commands.command(name='edefine', aliases=['ed'])
-    async def english_define(self, ctx, word: str):
+    async def english_define(self, ctx, *, word: str):
         """Show English translated definitions for a word"""
         result = self._define_word('eng', word)
         await ctx.send(result)
