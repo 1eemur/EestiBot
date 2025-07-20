@@ -226,6 +226,10 @@ def run():
     await ctx.send('https://i.imgur.com/8USHKLS.mp4')
 
   @bot.command()
+  async def alatihommik(ctx: commands.Context):
+    await ctx.send('https://i.imgur.com/1bpeuE4.png')
+
+  @bot.command()
   async def c(ctx: commands.Context, word: str):
     await ctx.send(searchCases(word))
 
