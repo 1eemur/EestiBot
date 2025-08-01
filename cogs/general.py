@@ -28,12 +28,12 @@ class General(commands.Cog):
             "***If you want to start learning you could use:***\n"
             "<https://www.keeleklikk.ee>\n"
             "or\n"
-            "<https://www.speakly.me/>\n"
+            "<https://www.speakly.me>\n"
             "Keeleklikk is free and Speakly is paid with a two-week free trial "
             "and discount codes available.\n"
             "code FNS7 to get 40% off \n"
             "*For a full Estonian resource list, you can take a look at: "
-            "<http://eestikeelt.com/>*"
+            "<https://eestikeelt.com>*"
         )
         await ctx.send(message)
     
