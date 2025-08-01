@@ -26,7 +26,7 @@ class General(commands.Cog):
         """Display Estonian learning resources"""
         message = (
             "***If you want to start learning you could use:***\n"
-            "<https://www.keeleklikk.ee/index_en.html>\n"
+            "<https://www.keeleklikk.ee>\n"
             "or\n"
             "<https://www.speakly.me/>\n"
             "Keeleklikk is free and Speakly is paid with a two-week free trial "
