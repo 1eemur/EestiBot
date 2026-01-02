@@ -99,7 +99,7 @@ class General(commands.Cog):
             "<https://maps.app.goo.gl/ETFQtqURxLFYEqi3A>\n"
             "- Viru Gate\n"
             "<https://maps.app.goo.gl/whkjsqNmP7zKRrgb8>\n"
-            "- Balti Jamma Market\n"
+            "- Balti Jaama Market\n"
             "<https://maps.app.goo.gl/236s9NfR7jLhPaMX9>\n"
             "- Linnahall\n"
             "<https://maps.app.goo.gl/UtBDo4zkXaYCxDCy8>\n"
